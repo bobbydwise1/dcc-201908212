@@ -9,21 +9,36 @@ Given two strings, compute the edit distance between them.
 */
 
 const compareStrings = (string1, string2) => {
-  let count = 0;
-  let temp;
+  let count1 = 0;
+  let count2 = 0;
+  let string1rev;
+  let string2rev;
   if (string1.length < string2.length) {
-    temp = string1;
+    string1rev = string1;
     string1 = string2;
-    string2 = temp;
+    string2 = string1rev;
     }
+  string1rev = reverseString(string1);
+  string2rev = reverseString(string2);
   for (i=0; i<string1.length; i++) {
     console.log("loop # ", i, ", (x,y): ", string1[i],", ", string2[i])
     if (string1[i] != string2[i]) {
-      count++;
+      count1++;
     }
-    console.log("count is = ", count)
+    console.log("count1 is = ", count1)
   }
-  return count;
+  for (i=0; i<string1rev.length; i++) {
+    console.log("loop # ", i, ", (x,y): ", string1rev[i],", ", string2rev[i])
+    if (string1rev[i] != string2rev[i]) {
+      count2++;
+    }
+    console.log("count2 is = ", count2)
+  }
+  if (count1 < count2) {
+    return count1;
+  } else {
+    return count2;
+  }
 }
 
 const reverseString = (yourString) => {
