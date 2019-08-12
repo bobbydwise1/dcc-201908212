@@ -21,18 +21,18 @@ const compareStrings = (string1, string2) => {
   string1rev = reverseString(string1);
   string2rev = reverseString(string2);
   for (i=0; i<string1.length; i++) {
-    console.log("loop # ", i, ", (x,y): ", string1[i],", ", string2[i])
+    //console.log("loop # ", i, ", (x,y): ", string1[i],", ", string2[i])
     if (string1[i] != string2[i]) {
       count1++;
     }
-    console.log("count1 is = ", count1)
+    //console.log("count1 is = ", count1)
   }
   for (i=0; i<string1rev.length; i++) {
-    console.log("loop # ", i, ", (x,y): ", string1rev[i],", ", string2rev[i])
+    //console.log("loop # ", i, ", (x,y): ", string1rev[i],", ", string2rev[i])
     if (string1rev[i] != string2rev[i]) {
       count2++;
     }
-    console.log("count2 is = ", count2)
+    //console.log("count2 is = ", count2)
   }
   if (count1 < count2) {
     return count1;
@@ -61,7 +61,7 @@ $(document).ready(function() {
   $('#form1').submit(function(event) {
   event.preventDefault();
   let input1 = $('#input1').val();
-  console.log(input1)
-  $('#output-section-1').text(input1);
+  let input2 = $('#input2').val();
+  $('#output-section-1').text(compareStrings(input1,input2));
   })
 });
