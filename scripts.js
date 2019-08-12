@@ -26,6 +26,14 @@ const compareStrings = (string1, string2) => {
   return count;
 }
 
+const reverseString = (yourString) => {
+  let output = '';
+  for (i=yourString.length-1; i>=0; i--) {
+    output = output + yourString[i];
+  }
+  return output;
+}
+
 // let test1 = "kitten";
 // let test2 = "sitting";
 // console.log(compareStrings(test1,test2))
