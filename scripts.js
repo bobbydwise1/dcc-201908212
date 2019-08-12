@@ -26,9 +26,13 @@ const compareStrings = (string1, string2) => {
   return count;
 }
 
-let test1 = "kitten";
-let test2 = "sitting";
-console.log(compareStrings(test1,test2))
+// let test1 = "kitten";
+// let test2 = "sitting";
+// console.log(compareStrings(test1,test2))
+
+let test3 = "reopen";
+let test4 = "open";
+console.log(compareStrings(test3,test4))
 
 $(document).ready(function() {
   $('#form1').submit(function(event) {
