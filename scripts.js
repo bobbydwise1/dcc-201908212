@@ -33,9 +33,9 @@ const compareStrings = (string1, string2) => {
     }
   }
   let regex = new RegExp(string2)
-  console.log(regex)
-  console.log(string1.match(regex), [string2])
-  if (string1.match(regex)[0]==string2) {count3 = string1.length-string2.length}
+  if (string1.match(regex) != null) {
+    if (string1.match(regex)[0]==string2) {count3 = string1.length-string2.length}
+  }
   return Math.min(count1,count2,count3)
 }
 
