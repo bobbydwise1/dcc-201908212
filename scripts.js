@@ -23,18 +23,14 @@ const compareStrings = (string1, string2) => {
   string1rev = reverseString(string1);
   string2rev = reverseString(string2);
   for (i=0; i<string1.length; i++) {
-    //console.log("loop # ", i, ", (x,y): ", string1[i],", ", string2[i])
     if (string1[i] != string2[i]) {
       count1++;
     }
-    //console.log("count1 is = ", count1)
   }
   for (i=0; i<string1rev.length; i++) {
-    //console.log("loop # ", i, ", (x,y): ", string1rev[i],", ", string2rev[i])
     if (string1rev[i] != string2rev[i]) {
       count2++;
     }
-    //console.log("count2 is = ", count2)
   }
   let regex = new RegExp(string2)
   console.log(regex)
@@ -50,14 +46,6 @@ const reverseString = (yourString) => {
   }
   return output;
 }
-
-// let test1 = "kitten";
-// let test2 = "sitting";
-// console.log(compareStrings(test1,test2))
-
-let test3 = "reopen";
-let test4 = "open";
-console.log(compareStrings(test3,test4))
 
 $(document).ready(function() {
   $('#form1').submit(function(event) {
