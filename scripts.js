@@ -22,20 +22,24 @@ const compareStrings = (string1, string2) => {
     }
   string1rev = reverseString(string1);
   string2rev = reverseString(string2);
+  //Find suffixes
   for (i=0; i<string1.length; i++) {
     if (string1[i] != string2[i]) {
       count1++;
     }
   }
+  //find prefixes
   for (i=0; i<string1rev.length; i++) {
     if (string1rev[i] != string2rev[i]) {
       count2++;
     }
   }
+  //find prefixes+suffixes
   let regex = new RegExp(string2)
   if (string1.match(regex) != null) {
     if (string1.match(regex)[0]==string2) {count3 = string1.length-string2.length}
   }
+  //Pick the smallest change delta
   return Math.min(count1,count2,count3)
 }
 
